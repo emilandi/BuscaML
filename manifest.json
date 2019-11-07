@@ -1,0 +1,16 @@
+{
+	"name":"Buscar en MercadoLibre",
+	"manifest_version": 2,  
+	"version": "1.0.19",
+	"background": {
+      "scripts": [ "main.js" ]
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	 },
+	"permissions": [
+		"contextMenus", 
+		"tabs"]    		
+}
