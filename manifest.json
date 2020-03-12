@@ -13,5 +13,5 @@
 	 },
 	"permissions": [
 		"contextMenus", 
-		"tabs"]    		
+		"tabs"]	
 }

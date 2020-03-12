@@ -34,7 +34,7 @@ function fnInfo (obj) {
   console.log(obj);
 }
 
-searchUrbanDict = function(word){
+fnBuscarML = function(word){
   
   var region = fnGetRegion('region');
   
@@ -80,7 +80,7 @@ function fnDominio(region){
 chrome.contextMenus.create({
   title: "Buscar  '%s' en Mercado Libre",
   contexts:["selection"],  // ContextType
-  onclick:searchUrbanDict // A callback function
+  onclick:fnBuscarML // A callback function
 });
 
 
