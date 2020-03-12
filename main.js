@@ -4,30 +4,39 @@ fnSetRegion(region);
 document.addEventListener('DOMContentLoaded', init, false);
 
 function init(){
+  
   var url = "http://ip-api.com/json";
-  var xhttp = new XMLHttpRequest();  
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {      
-      var obj = JSON.parse(xhttp.responseText);     
-      region = obj.countryCode;
-      fnSetRegion(region);
-      fnInfo(obj);
-    }
-  };
-  xhttp.open("GET", url , true);
-  xhttp.send();
+  var xhr = new XMLHttpRequest();
+  
+  xhr.onload = success;
+  xhr.onerror = error;
+  xhr.open('GET', url);
+  xhr.send();
+
 };
+
+function success() {
+  var obj = JSON.parse(this.responseText);
+  region = obj.countryCode;
+  fnSetRegion(region);  
+  fnInfo(obj);
+}
+
+function error(err) {
+  console.log('Error Occurred :', err);
+}
 
 function fnInfo (obj) {
   console.log('Datos de conexion: ')
   console.log('Pais: ' + obj.country);
   console.log('Region: ' + obj.regionName);
   console.log('Cuidad: ' + obj.city);
+  console.log(obj);
 }
 
 searchUrbanDict = function(word){
   
-  var region = fnGetRegion('region');  
+  var region = fnGetRegion('region');
   
   if (region) {        
     var query = word.selectionText; 
@@ -44,12 +53,6 @@ searchUrbanDict = function(word){
 
 };
 
-/*evento menu contextual */
-chrome.contextMenus.create({
-  title: "Buscar  '%s' en Mercado Libre",
-  contexts:["selection"],  // ContextType
-  onclick:searchUrbanDict // A callback function
-});
 
 /* Retorna la URL de busqueda en base al dominio  
 DOMINIOS AR,BO,BR,CO,DO,EC,HN,MX,NI,PA,PY,PE,SV,UY,VE*/
@@ -72,6 +75,14 @@ function fnDominio(region){
   return url + region;
 
 }
+
+/*evento menu contextual */
+chrome.contextMenus.create({
+  title: "Buscar  '%s' en Mercado Libre",
+  contexts:["selection"],  // ContextType
+  onclick:searchUrbanDict // A callback function
+});
+
 
 function fnSetRegion(value) {
   localStorage.setItem('region',value)
