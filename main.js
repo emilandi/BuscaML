@@ -43,7 +43,7 @@ fnBuscarML = function(word){
     var url = fnDominio(region);             
     chrome.tabs.create({url: url + "/" + query});         
   }else{
-    alert ('No se pudo obtener la localizacion');
+    alert ('No se pudo obtener geolocalizacion');
   };
 
   console.clear();
