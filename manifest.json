@@ -1,7 +1,7 @@
 {
 	"name":"Buscar en MercadoLibre",
 	"manifest_version": 2,  
-	"version": "1.0.4",
+	"version": "1.0.5",
    	"description": "Buscar en Mercado Libre usando el menu contextual",
 	"background": {
       "scripts": [ "main.js" ]
