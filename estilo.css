@@ -7,7 +7,7 @@ body{
     width: 200px;
     padding: 10px;
     margin: 10px;
-    background-color: #FFF159 !important;    
+    
 }
 
 label{
@@ -20,9 +20,8 @@ label{
     margin-top: 10px;
 }
 
-div{
-    background-color: #fff;
-    background-color: #FFF159 !important;    
+div,body{    
+    background-color: #FFF159 !important;
 }
 
 div,button,label,section,body{
