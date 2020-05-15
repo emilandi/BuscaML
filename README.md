@@ -1,7 +1,7 @@
 # BuscaML
 Buscar en MercadoLibre  - Chrome Extension
 
-Extension de Google Chrome para buscar en Mercado Libre desde el menu contextual seleccionando texto en cualquier pagina.-
+Extension de Google Chrome para buscar en Mercado Libre usando el menu contextual.-
 
 
 Link Chrome Web Store
