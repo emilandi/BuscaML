@@ -1,16 +1,22 @@
 {
-	"name":"Buscar en MercadoLibre",
+	"name":"Buscar en Mercado Libre",
 	"manifest_version": 2,  
-	"version": "1.0.5",
-   	"description": "Buscar en Mercado Libre usando el menu contextual",
-	"background": {
-      "scripts": [ "main.js" ]
+	"version": "1.0.6",
+   	"description": "Realiza una busqueda usando el menu contextual",
+	"browser_action": {		
+		"default_popup": "options.html"
 	},
+	"background": {
+      "scripts": [ "js/main.js" ]
+	},	
 	"icons": {
-		"16": "icon-16.png",
-		"48": "icon-48.png",
-		"128": "icon-128.png"
+		"16": "img/icon-128c.png",
+		"48": "img/icon-128c.png",
+		"128": "img/icon-128c.png"
 	 },
+	 "web_accessible_resources":[
+		"../fonts/ProximaNova-Regular.otf"
+	],
 	"permissions": [
 		"contextMenus"]	
 }

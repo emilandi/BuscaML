@@ -1,0 +1,30 @@
+select{
+    display: block;
+    margin-bottom: 10px !important;         
+}
+
+body{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #FFF159 !important;    
+}
+
+label{
+    padding: 0 !important;
+    margin: 0 !important;     
+}
+
+#btnsave{
+    display: block;
+    margin-top: 10px;
+}
+
+div{
+    background-color: #fff;
+    background-color: #FFF159 !important;    
+}
+
+div,button,label,section,body{
+    font-family: "Proxima Nova Regular" !important;     
+}
