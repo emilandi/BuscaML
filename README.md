@@ -5,7 +5,6 @@ Extension de Google Chrome para buscar en Mercado Libre usando el menu contextua
 
 
 Link Chrome Web Store
-https://bit.ly/3cGfLq0
 
 https://chrome.google.com/webstore/detail/buscar-en-mercadolibre/klmjhmebmifmdombbdecdeeannafjofd
 
